@@ -8,7 +8,7 @@ const useStyles = createUseStyles(
     return {
       container: {
         position: "relative",
-        background: "pink",
+        // background: "pink",
       },
 
       head: {
@@ -85,7 +85,7 @@ const useStyles = createUseStyles(
       },
 
       hangmanColumn: {
-        height: "380px",
+        height: "330px",
         width: "10px",
         background: "black",
         marginLeft: "120px",
@@ -95,6 +95,7 @@ const useStyles = createUseStyles(
         width: "250px",
         background: "black",
       },
+      hangmanComponent: {},
     };
   },
   { name: "HangmanDrawing" }

@@ -1,18 +1,16 @@
 import React, { useCallback, useEffect, useState } from "react";
-
 import HangmanDrawing from "./components/HangmanDrawing/HangmanDrawing";
 import Keyboard from "./components/Keyboard/Keyboard";
 import words from "./data/wordList.json";
 import useStyles from "./Apps.styles";
 import HangmanWord from "./components/HangmanWord/HangmanWord";
+import { log } from "console";
 
 function App() {
   const classes = useStyles();
-  const [wordToGuess, setWordToGuess] = useState(() => {
-    // return "test";
-    return words[Math.floor(Math.random() * words.length)];
-  });
-  // console.log(wordToGuess);
+  const [wordToGuess, setWordToGuess] = useState(
+    words[Math.floor(Math.random() * words.length)]
+  );
   const [guessedLetters, setGuessedLetters] = useState<string[]>([]);
   const incorrectLetters = guessedLetters.filter(
     (letter) => !wordToGuess.includes(letter)

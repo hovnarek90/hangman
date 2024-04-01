@@ -5,7 +5,8 @@ const useStyles = createUseStyles(
     return {
       container: {
         display: "flex",
-        gap: "0.25em",
+        flexDirection: "column",
+        gap: "0.5em",
         fontSize: "6rem",
         fontWeight: "bold",
         textAlign: "center",
@@ -13,6 +14,8 @@ const useStyles = createUseStyles(
         fontFamily: "monospace",
       },
       letterBorder: {
+        width: "100px",
+        marginLeft: "15px",
         borderBottom: ".5rem solid black",
       },
       letterRed: {
@@ -25,6 +28,9 @@ const useStyles = createUseStyles(
         visibility: "hidden",
       },
       visible: {},
+      description: {
+        fontSize: "1rem",
+      },
     };
   },
   { name: "HangmanWord" }
